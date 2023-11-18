@@ -76,10 +76,26 @@ p {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    position: relative;
 }
 
 .cta-button {
     width: 20%;
+}
+
+.cta-button::before {
+    content: ""; /* Empty content to create a pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path/to/your/image.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity of the background image */
+    border-radius: 5px; /* Ensure the same border radius as the button */
+    z-index: -1; /* Move the background image behind the text */
 }
 
 .cta-button:hover {
