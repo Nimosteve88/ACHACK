@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
+    <div class="scores">
+        <h1>Previous Score</h1>
+        <h1>{{previous_score}}</h1>
 
-    <h1>Previous Score</h1>
-    <h1>{{previous_score}}</h1>
+        <h1>After Score</h1>
+        <h1>{{final_score}}</h1>
+    </div>
 
-    <h1>After Score</h1>
-    <h1>{{final_score}}</h1>
-
-    <table>
+    <table class="scoreboard">
         <thead>
             <tr>
                 <th>Rank</th>
