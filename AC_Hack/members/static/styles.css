@@ -145,6 +145,11 @@ footer {
     text-align: center;
 }
 
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
 .fact-box-master {
     display: flex;
     flex-wrap: wrap;
