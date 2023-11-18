@@ -6,14 +6,12 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #405091;
     padding: 20px;
+    text-align: center;
     color: white;
 }
 
@@ -29,15 +27,16 @@ header {
 
 .header-buttons {
     display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
 }
 
-.header-link {
-    padding: 10px 15px;
+.header-button {
+    padding: 10px 20px;
+    background-color: #45a049;
     color: white;
     text-decoration: none;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s;
 }
 
@@ -55,18 +54,12 @@ section {
     text-align: center;
 }
 
-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust the alignment as needed */
-}
-
 h2 {
-    color: #4CAF50;
+    color
 }
 
 h1 {
-    color: #f4f5f4;
+    color: #4CAF50;
 }
 
 p {
@@ -78,22 +71,37 @@ p {
     margin: 10px;
     padding: 15px 30px; /* Adjust the padding to increase button size */
     font-size: 18px; /* Adjust the font-size to increase button size */
-    background-color: #4CAF50;
+    background-color: #604caf;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
+    position: relative;
 }
 
 .cta-button {
     width: 20%;
 }
 
+.cta-button::before {
+    content: ""; /* Empty content to create a pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path/to/your/image.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity of the background image */
+    border-radius: 5px; /* Ensure the same border radius as the button */
+    z-index: -1; /* Move the background image behind the text */
+}
+
 .cta-button:hover {
     background-color: #032305;
 }
 
-/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
@@ -118,23 +126,55 @@ footer {
     margin-top: 20px;
 }
 
-.bottom-links {
+.quiz-container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.bottom-link {
+.quiz-box {
+    width: 45%;
+    height: 45%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    border: 2px solid #333; /* Add this line for the outline */
+}
+
+.fact-box-master {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 2fr 2fr;
+    
+}
+
+.fact-box {
+    width: 150px; /* Adjust as needed for spacing */
+    height: 150px;
+    margin: 10px 0;
     padding: 20px;
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: transform 0.3s;
+    border: 2px solid #333;
+    justify-self: center;
 }
 
-.bottom-link:hover {
-    transform: scale(1.1);
+.next-page {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-image {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 20px; /* Adjust the space between the image and the title */
 }
 
 /* Styling for the rewards.html file */
