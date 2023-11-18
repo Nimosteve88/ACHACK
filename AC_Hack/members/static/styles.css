@@ -136,3 +136,20 @@ footer {
 .bottom-link:hover {
     transform: scale(1.1);
 }
+
+/* Styling for the rewards.html file */
+.scores {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.scoreboard {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
