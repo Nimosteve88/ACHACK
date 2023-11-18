@@ -9,3 +9,6 @@ def members(request):
     return HttpResponse(template.render())
 
 
+def topics(request):
+    template = loader.get_template('topics.html')
+    return HttpResponse(template.render())
