@@ -29,11 +29,11 @@
             </div>
         </div><br>
             <!-- 4 Boxes with Random Facts -->
-            <div class ="fact-box-master">
-                <div class="fact-box">Fact 1</div>
-                <div class="fact-box">Fact 2</div>
-                <div class="fact-box">Fact 3</div>
-                <div class="fact-box">Fact 4</div>
+            <div class="fact-box-master">
+                <div class="fact-box" onclick="showModal('Fact 1', 'Additional information for Fact 1.')">Fact 1</div>
+                <div class="fact-box" onclick="showModal('Fact 2', 'Additional information for Fact 2.')">Fact 2</div>
+                <div class="fact-box" onclick="showModal('Fact 3', 'Additional information for Fact 3.')">Fact 3</div>
+                <div class="fact-box" onclick="showModal('Fact 4', 'Additional information for Fact 4.')">Fact 4</div>
             </div>
         <div class="quiz-container">
             <!-- Another Text-based Quiz Box -->
@@ -45,14 +45,5 @@
 
     <!-- Arrow for Next Page -->
     <div class="next-page">&#9654;</div>
-    <script>
-        function nextQ(){
-
-        }
-
-        function prevQ(){
-
-        }
-    </script>
 </div>
 {% endblock %}
