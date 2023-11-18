@@ -55,8 +55,14 @@ section {
     text-align: center;
 }
 
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust the alignment as needed */
+}
+
 h2 {
-    color
+    color: #4CAF50;
 }
 
 h1 {
@@ -69,7 +75,9 @@ p {
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    margin: 10px;
+    padding: 15px 30px; /* Adjust the padding to increase button size */
+    font-size: 18px; /* Adjust the font-size to increase button size */
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
@@ -77,8 +85,12 @@ p {
     transition: background-color 0.3s;
 }
 
+.cta-button {
+    width: 20%;
+}
+
 .cta-button:hover {
-    background-color: #45a049;
+    background-color: #032305;
 }
 
 /* Footer Styles */
