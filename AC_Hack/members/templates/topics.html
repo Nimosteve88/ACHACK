@@ -10,11 +10,11 @@
             </div>
         </div><br>
             <!-- 4 Boxes with Random Facts -->
-            <div class ="fact-box-master">
-                <div class="fact-box">Fact 1</div>
-                <div class="fact-box">Fact 2</div>
-                <div class="fact-box">Fact 3</div>
-                <div class="fact-box">Fact 4</div>
+            <div class="fact-box-master">
+                <div class="fact-box" onclick="showModal('Fact 1', 'Additional information for Fact 1.')">Fact 1</div>
+                <div class="fact-box" onclick="showModal('Fact 2', 'Additional information for Fact 2.')">Fact 2</div>
+                <div class="fact-box" onclick="showModal('Fact 3', 'Additional information for Fact 3.')">Fact 3</div>
+                <div class="fact-box" onclick="showModal('Fact 4', 'Additional information for Fact 4.')">Fact 4</div>
             </div>
         <div class="quiz-container">
             <!-- Another Text-based Quiz Box -->
@@ -26,5 +26,26 @@
 
     <!-- Arrow for Next Page -->
     <div class="next-page">&#9654;</div>
+    <div id="factModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalHeader"></h2>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+    
+    <script>
+        // Function to show the modal
+        function showModal(header, content) {
+            document.getElementById("modalHeader").innerHTML = header;
+            document.getElementById("modalContent").innerHTML = content;
+            document.getElementById("factModal").style.display = "block";
+        }
+    
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("factModal").style.display = "none";
+        }
+    </script>
 </div>
 {% endblock %}
