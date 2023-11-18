@@ -12,7 +12,7 @@ def members(request):
 def topics(request):
     template = loader.get_template('topics.html')
     return HttpResponse(template.render())
-
+    
 def rewards(request):
     # players is gonna be taken from a database of scores
     # TODO define the players document
