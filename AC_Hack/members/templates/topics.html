@@ -1,16 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
+<div class="full-container">
         <div class="quiz-container">
             <!-- Text-based Quiz Boxes -->
             <div class="quiz-box">
                 <h3>Quiz 1</h3>
-                <p>Question 1: What is the capital of France?</p>
-                <p>Question 2: Who wrote Romeo and Juliet?</p>
                 <!-- Add more questions as needed -->
             </div>
-        </div>
+        </div><br>
             <!-- 4 Boxes with Random Facts -->
             <div class ="fact-box-master">
                 <div class="fact-box">Fact 1</div>
@@ -22,13 +20,11 @@
             <!-- Another Text-based Quiz Box -->
             <div class="quiz-box">
                 <h3>Quiz 2</h3>
-                <p>Question 1: What is the capital of Germany?</p>
-                <p>Question 2: Who discovered penicillin?</p>
                 <!-- Add more questions as needed -->
             </div>
         </div>
-    </div>
 
     <!-- Arrow for Next Page -->
     <div class="next-page">&#9654;</div>
+</div>
 {% endblock %}
