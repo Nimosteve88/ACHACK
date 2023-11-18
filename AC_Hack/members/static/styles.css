@@ -190,3 +190,19 @@ footer {
     margin-right: 20px; /* Adjust the space between the image and the title */
 }
 
+/* Styling for the rewards.html file */
+.scores {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.scoreboard {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
