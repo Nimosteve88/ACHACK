@@ -3,10 +3,47 @@
 {% block content %}
 
 <div class="fact-box-master">
-    <div class="fact-box" onclick="showModal('Fact 1', 'Additional information for Fact 1.')">Fact 1</div>
-    <div class="fact-box" onclick="showModal('Fact 2', 'Additional information for Fact 2.')">Fact 2</div>
-    <div class="fact-box" onclick="showModal('Fact 3', 'Additional information for Fact 3.')">Fact 3</div>
-    <div class="fact-box" onclick="showModal('Fact 4', 'Additional information for Fact 4.')">Fact 4</div>
+    <div class="fact-box" onclick="showModal('Fact 1', '<h3>Fact 1</h3><p>This is the content for Fact 1. It can include additional information, details, or any relevant text.</p>')">
+        <h3>Fact 1</h3>
+        <p>This is the content for Fact 1. It can include additional information, details, or any relevant text.</p>
+    </div>
+    <div class="fact-box" onclick="showModal('Fact 2', '<h3>Fact 2</h3><p>This is the content for Fact 2. It can include additional information, details, or any relevant text.</p>')">
+        <h3>Fact 2</h3>
+        <p>This is the content for Fact 2. It can include additional information, details, or any relevant text.</p>
+    </div>
+    <div class="fact-box" onclick="showModal('Fact 3', '<h3>Fact 3</h3><p>This is the content for Fact 3. It can include additional information, details, or any relevant text.</p>')">
+        <h3>Fact 3</h3>
+        <p>This is the content for Fact 3. It can include additional information, details, or any relevant text.</p>
+    </div>
+    <div class="fact-box" onclick="showModal('Fact 4', '<h3>Fact 4</h3><p>This is the content for Fact 4. It can include additional information, details, or any relevant text.</p>')">
+        <h3>Fact 4</h3>
+        <p>This is the content for Fact 4. It can include additional information, details, or any relevant text.</p>
+    </div>
 </div>
 
-{%endblock%}
+<!-- Modal -->
+<div id="factModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalTitle"></div>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script>
+    function showModal(title, content) {
+        var modalTitle = document.getElementById('modalTitle');
+        var modalContent = document.getElementById('modalContent');
+
+        modalTitle.innerHTML = title;
+        modalContent.innerHTML = content;
+
+        document.getElementById('factModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('factModal').style.display = 'none';
+    }
+</script>
+
+{% endblock %}
