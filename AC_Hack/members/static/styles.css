@@ -134,7 +134,7 @@ footer {
 }
 
 .quiz-box {
-    font-size: 15px;
+    /* font-size: 15px; */
     width: 1450px;
     height: 450px;
     margin: 10px;
@@ -143,6 +143,11 @@ footer {
     border-radius: 8px;
     border: 2px solid #333; /* Add this line for the outline */
     text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
 }
 
 .fact-box-master {

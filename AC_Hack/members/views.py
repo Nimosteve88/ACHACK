@@ -9,8 +9,16 @@ def members(request):
     return HttpResponse(template.render())
 
 
-def topics(request):
-    template = loader.get_template('topics.html')
+def quiz1(request):
+    template = loader.get_template('quiz1.html')
+    return HttpResponse(template.render())
+
+def quiz2(request):
+    template = loader.get_template('quiz2.html')
+    return HttpResponse(template.render())
+
+def facts(request):
+    template = loader.get_template('facts.html')
     return HttpResponse(template.render())
     
 def rewards(request):
