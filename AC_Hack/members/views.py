@@ -12,3 +12,7 @@ def members(request):
 def topics(request):
     template = loader.get_template('topics.html')
     return HttpResponse(template.render())
+
+def rewards(request):
+    template = loader.get_template('rewards.html')
+    return HttpResponse(template.render())
