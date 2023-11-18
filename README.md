@@ -62,4 +62,11 @@ Participants must develop methods to deliver educational content in a manner tha
 
   - We will use a PowerPoint with a video demo
   - [Previous Canva link](https://imperiallondon-my.sharepoint.com/:p:/g/personal/sn722_ic_ac_uk/EWCnLTfz_wpHvEkAL1zCA7AB5Km2uu1KwsAmaAcpXr2Eig?e=vmKMH6)
-  
+
+
+
+- # How to run Product on local Server
+- On your command line direct yourself to the AC_Hack folder (from the ACHACK directory)
+- Once you have done this, type: python manage.py runserver
+- ![image](https://github.com/Nimosteve88/ACHACK/assets/85235717/b7febf05-3987-4ee7-95f9-e5367b605363)
+
