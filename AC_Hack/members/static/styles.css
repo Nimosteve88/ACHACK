@@ -118,6 +118,7 @@ footer {
 
 .quiz-box {
     width: 45%;
+    height: 45%;
     margin: 10px;
     padding: 20px;
     background-color: #e0e0e0;
@@ -130,11 +131,12 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     grid-template-columns: 2fr 2fr;
+    
 }
 
 .fact-box {
-    width: 200px; /* Adjust as needed for spacing */
-    height: 200px;
+    width: 150px; /* Adjust as needed for spacing */
+    height: 150px;
     margin: 10px 0;
     padding: 20px;
     background-color: #4CAF50;
