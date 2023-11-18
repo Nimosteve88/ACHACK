@@ -133,33 +133,44 @@ footer {
 }
 
 .quiz-box {
-    width: 45%;
-    height: 45%;
+    width: 1500px;
+    height: 400px;
     margin: 10px;
     padding: 5px;
     background-color: #e0e0e0;
     border-radius: 8px;
     border: 2px solid #333; /* Add this line for the outline */
+    text-align: center;
 }
 
 .fact-box-master {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 2fr 2fr;
-    grid-gap: 20px;
-    grid-column-gap: -100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* or justify-content: space-between; */
 }
 
 .fact-box {
-    width: 100px; /* Adjust as needed for spacing */
-    height: 100px;
+    width: 45%; /* Adjust as needed for spacing */
+    height: 350px;
+    margin: 10px 0; /* Adjust the margin as needed */
     padding: 20px;
     background-color: #4CAF50;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     border: 2px solid #333;
-    justify-self: center;
+    box-sizing: border-box; /* Add this to include padding and border in the width */
+    text-align: center;
+    /*width: 300px;
+    height: 300px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    position: relative;
+    border: 2px solid #333;
+    justify-content: center;*/
 }
 
 .next-page {
