@@ -120,7 +120,7 @@ footer {
     width: 45%;
     height: 45%;
     margin: 10px;
-    padding: 20px;
+    padding: 5px;
     background-color: #e0e0e0;
     border-radius: 8px;
     border: 2px solid #333; /* Add this line for the outline */
@@ -128,16 +128,15 @@ footer {
 
 .fact-box-master {
     display: grid;
-    flex-wrap: wrap;
     justify-content: center;
     grid-template-columns: 2fr 2fr;
-    
+    grid-gap: 20px;
+    grid-column-gap: -100px;
 }
 
 .fact-box {
-    width: 150px; /* Adjust as needed for spacing */
-    height: 150px;
-    margin: 10px 0;
+    width: 100px; /* Adjust as needed for spacing */
+    height: 100px;
     padding: 20px;
     background-color: #4CAF50;
     color: white;
