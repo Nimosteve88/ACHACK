@@ -14,10 +14,12 @@
     <div class="header-content">
         <div class="title-and-image">
             <img class="header-image" src="url" alt="alternatetext">
-            <h1 class="header-title">Bridging the Gap</h1>
+            <a href="{% url 'home' %}" class="header-link">
+                <h1 class="header-title">Bridging the Gap</h1>
+            </a>
         </div>
         <div class="header-buttons">
-            <a href="#" class="header-link">Button 1</a>
+            <a href="{% url 'topics' %}" class="header-link">Topics</a>
             <a href="#" class="header-link">Button 2</a>
             <a href="#" class="header-link">Button 3</a>
         </div>
