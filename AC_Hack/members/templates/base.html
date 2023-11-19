@@ -11,21 +11,21 @@
 </head>
 <body>
 
-<header>
-    <div class="header-content">
-        <div class="title-and-image">
-            <a href="{% url 'home' %}" class="header-link">
-                <h1 class="header-title">Bridging the Gap</h1>
-            </a>
+    <header>
+        <div class="header-content">
+            <div class="title-and-image">
+                <img class="headimg" src="{% static 'IMG_0022.jpg' %}" alt="alternatetext">
+                <a href="{% url 'home' %}" class="header-link">
+                    <h1 class="header-title">Bridging the Gap</h1>
+                </a>
+            </div>
+            <div class="header-buttons">
+                <a href="{% url 'quiz1' %}" class="header-link">Button 1</a>
+                <a href="#" class="header-link">Button 2</a>
+                <a href="#" class="header-link">Button 3</a>
+            </div>
         </div>
-        <div class="header-buttons">
-            <a href="{% url 'quiz1' %}" class="header-link">Button 1</a>
-            <a href="#" class="header-link">Button 2</a>
-            <a href="#" class="header-link">Button 3</a>
-        </div>
-    </div>
-    
-</header>
+    </header>
 
 {% block content %}{% endblock %}
 

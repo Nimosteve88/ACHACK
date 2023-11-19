@@ -13,5 +13,5 @@ urlpatterns = [
     path('healthyRelationships/', views.healthyRelationships, name='healthyRelationships'),
     path('keepingFit/', views.keepingFit, name='keepingFit'),
     path('mentalHealthAndWellBeing/', views.mentalHealthAndWellBeing, name='mentalHealthAndWellBeing'),
-
+    
 ]

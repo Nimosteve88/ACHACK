@@ -1,25 +1,29 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 <div class="fact-box-master">
-    <div class="fact-box" onclick="showModal('Fact 1', '<h3>Fact 1</h3><p>This is the content for Fact 1. It can include additional information, details, or any relevant text.</p>')">
+    <div class="fact-box" onclick="showModal('Fact 1', '<h3>Energy Expenditure: Where Does It Go?</h3><p>Imagine the energy consumption in your home. What appliances or activities consume the most energy? The answer might surprise you. While electronic devices and lighting undoubtedly contribute to energy usage, the biggest energy hog is often heating and cooling our homes. </p> <img class=\'modal-img\' src=\'{% static "fact1.png" %}\'> <iframe width=\'560\' height=\'315\' src=\'https://www.youtube.com/embed/-FShaurpinA?si=ArCRcNWWJlY3O5cF\' title=\'YouTube video player\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>')">
         <h3>Fact 1</h3>
         <p>This is the content for Fact 1. It can include additional information, details, or any relevant text.</p>
     </div>
-    <div class="fact-box" onclick="showModal('Fact 2', '<h3>Fact 2</h3><p>This is the content for Fact 2. It can include additional information, details, or any relevant text.</p>')">
+    
+    <div class="fact-box" onclick="showModal('Fact 2', '<h3>Electrification: Powering Up Our Lives </h3><p> Have you heard the term electrification? Its a buzzword in the energy world, and it simply means using electricity instead of fossil fuels to power our homes, businesses, and transportation systems. This shift is crucial for reducing greenhouse gas emissions and improving air quality. </p><img class=\'modal-img\' src=\'{% static "fact2.png" %}\'> <iframe width=\'560\' height=\'315\' src=\'https://www.youtube.com/embed/bGVpG2WsFJY?si=70xx4uUCnVDagea6\' title=\'YouTube video player\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>')">
         <h3>Fact 2</h3>
         <p>This is the content for Fact 2. It can include additional information, details, or any relevant text.</p>
     </div>
-    <div class="fact-box" onclick="showModal('Fact 3', '<h3>Fact 3</h3><p>This is the content for Fact 3. It can include additional information, details, or any relevant text.</p>')">
+    
+    <div class="fact-box" onclick="showModal('Fact 3', '<h3>Wind Energy: Capturing the Power of Breezes </h3><p>Ever wondered about those towering wind turbines you see along highways or in open fields? Theyre not just giant fans; theyre powerhouses of renewable energy. Wind energy harnesses the kinetic energy of wind to generate electricity, a clean and sustainable alternative to fossil fuels. </p><img class=\'modal-img\' src=\'{% static "fact3.png" %}\'> <iframe width=\'560\' height=\'315\' src=\'https://www.youtube.com/embed/7w6Qj0iDVHE?si=kcnQ19B4t1Rq1Uj5\' title=\'YouTube video player\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>')">
         <h3>Fact 3</h3>
         <p>This is the content for Fact 3. It can include additional information, details, or any relevant text.</p>
     </div>
-    <div class="fact-box" onclick="showModal('Fact 4', '<h3>Fact 4</h3><p>This is the content for Fact 4. It can include additional information, details, or any relevant text.</p>')">
+    
+    <div class="fact-box" onclick="showModal('Fact 4', '<h3>kWh: The Language of Electricity Consumption </h3><p>When you receive your electricity bill, you might notice a unit called kWh (kilowatt-hour). This is the language of electricity consumption. It represents the amount of energy used by an appliance or device over one hour. </p><img class=\'modal-img\' src=\'{% static "fact4.png" %}\'> <iframe width=\'560\' height=\'315\' src=\'https://www.youtube.com/embed/zRYESRObKqA?si=7HzRb1MwzpIFu0Eh\' title=\'YouTube video player\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>')">
         <h3>Fact 4</h3>
         <p>This is the content for Fact 4. It can include additional information, details, or any relevant text.</p>
     </div>
 </div>
+
 
 <!-- Modal -->
 <div id="factModal" class="modal">
