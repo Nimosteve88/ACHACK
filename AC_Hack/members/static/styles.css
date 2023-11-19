@@ -1,7 +1,10 @@
 /* styles.css */
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Arial', sans-serif;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -79,6 +82,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    flex: 1;
 }
 
 section {
@@ -211,8 +215,8 @@ label {
 }
 
 .header-image {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    width: 250px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
     margin-right: 20px; /* Adjust the space between the image and the title */
 }
 
