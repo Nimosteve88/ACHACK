@@ -27,8 +27,6 @@
     const questionElement = document.getElementById("question");
     const formElement = document.getElementById("quizForm");
     const userAnswers = [];
-    var score1, score2;
-    let maxScore = quiz1Answers.length;
     const quizQuestions = [
         {
             question: "1. What do most families spend the most energy on?",
@@ -122,6 +120,6 @@
         }
         return count;
     }
-    score1 = 100 * (getScore(userAnswers) / quiz1Answers.length);
+
 </script>
 {% endblock %}

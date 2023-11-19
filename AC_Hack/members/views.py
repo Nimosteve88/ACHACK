@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from models import Person
 
 
 # Create your views here.
@@ -45,18 +46,14 @@ def mentalHealthAndWellBeing(request):
     template = loader.get_template('mentalHealthAndWellBeing.html')
     return HttpResponse(template.render())
     
-def rewards(request):
-    # players is gonna be taken from a database of scores
-    # TODO define the players document
-    template = loader.get_template('rewards.html')
-    players = [Player()]
-    context = {'previous_score' : 1, 'final_score' : 2, 'players': players} # this has some dummy values atm to just see the result
+def rewards_eas(request):
+    template = loader.get_template('rewards_eas.html')
+    players = Person.objects.all()
+    context = {"before" : 1, "after": 15, "players" : players} # we are taking in the before, after and the players database
     return HttpResponse(template.render(context, request))
 
-
-# making a quick class for the player just to test
-class Player():
-    def __init__(self) -> None:
-        self.rank = 1
-        self.name = "Caspar"
-        self.score = 1
+def rewards_other(request):
+    template = loader.get_template('rewards_other.html')
+    players = Person.objects.all()
+    context = {"before" : 1, "after": 15, "players" : players} # we are taking in the before, after and the players database
+    return HttpResponse(template.render(context, request))

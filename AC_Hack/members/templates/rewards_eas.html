@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <div class="scores">
+        <h1>Previous Score</h1>
+        <h1>{{before}}</h1>
+
+        <h1>After Score</h1>
+        <h1>{{after}}</h1>
+    </div>
+
+    <table class="scoreboard">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in players %}
+                <tr></tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ player }}</td>
+                    <td>{{ player.eas_score }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Add any additional content or scripts as needed -->
+
+</body>
+
+{% endblock %}
