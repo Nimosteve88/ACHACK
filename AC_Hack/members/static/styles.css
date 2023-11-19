@@ -31,7 +31,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('basebackground.png'); /* Replace with the path to your image */
+    background-image: url('background.png'); /* Replace with the path to your image */
     background-size: cover;
     background-position: center;
     opacity: 0.5; /* Adjust the opacity value as needed */
@@ -301,7 +301,7 @@ label {
 /* Styling for the rewards.html file */
 .scores {
     padding: 20px;
-    background-color: #4CAF50;
+    background-color: #4caf4f00;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -309,8 +309,8 @@ label {
 
 .scoreboard {
     padding: 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4caf4f00;
+    color: rgb(15, 1, 1);
     text-decoration: none;
     border-radius: 8px;
 }
