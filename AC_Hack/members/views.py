@@ -20,6 +20,30 @@ def quiz2(request):
 def facts(request):
     template = loader.get_template('facts.html')
     return HttpResponse(template.render())
+
+def belongingToACommunity(request):
+    template = loader.get_template('belongingToACommunity.html')
+    return HttpResponse(template.render())
+
+def energyAndSustainability(request):
+    template = loader.get_template('energyAndSustainability.html')
+    return HttpResponse(template.render())
+    
+def financialLiteracy(request):
+    template = loader.get_template('financialLiteracy.html')
+    return HttpResponse(template.render())
+    
+def healthyRelationships(request):
+    template = loader.get_template('healthyRelationships.html')
+    return HttpResponse(template.render())
+    
+def keepingFit(request):
+    template = loader.get_template('keepingFit.html')
+    return HttpResponse(template.render())
+
+def mentalHealthAndWellBeing(request):
+    template = loader.get_template('mentalHealthAndWellBeing.html')
+    return HttpResponse(template.render())
     
 def rewards(request):
     # players is gonna be taken from a database of scores
