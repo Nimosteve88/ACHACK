@@ -2,16 +2,48 @@
 
 {% block content %}
 
+
 <div class="landing-container">
-        <div class="content">
-            <h1>Welcome to our Mental Health & Well Being landing page</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla tortor ut nisi pulvinar, sed aliquam felis malesuada. Sed euismod felis nec massa vestibulum, ac laoreet arcu feugiat. Integer vel urna at velit eleifend tincidunt. Nullam hendrerit justo ac nunc luctus, vitae efficitur urna imperdiet.</p>
-        </div>
+    <div class="content">
+        <h1>Welcome to Our Mental Health & Well-being Landing Page</h1>
 
-        <div class="image">
-            <img src="your-image-url.jpg" alt="Energy and Sustainability Image">
-        </div>
+        <h2>Understanding Mental Health</h2>
+        <p>Mental health is all about how you feel on the inside. It's like taking care of your mind and heart to stay happy and positive. It affects how we handle stress, connect with others, and make choices in our lives.</p>
 
+        <h2>Why Well-being Matters</h2>
+        <p>Well-being means feeling good inside and out! It's about keeping a balance in your life. When you take care of your mental and emotional health, you can live a more awesome and fulfilling life.</p>
+
+        <h2>Tips for Feeling Great</h2>
+        
+            <p><strong>Self-Care:</strong> Treat yourself to things that make you happy and relaxed.</p>
+            <p><strong>Friendship Power:</strong> Hang out with friends and build strong connections.</p>
+            <p><strong>Chill Out:</strong> Learn cool ways to manage stress, like deep breathing or listening to your favorite music.</p>
+            <p><strong>Ask for Help:</strong> It's okay to talk to someone you trust or a professional if you need support.</p>
+        
+
+        <h2>Common Feelings We All Have</h2>
+        <p>Feeling worried, sad, or stressed happens to everyone. It's part of being human. What matters is learning how to cope and asking for help when needed.</p>
+
+        <h2>Let's Talk About It</h2>
+        <p>It's important to talk openly about mental health. Everyone deserves kindness and understanding. Together, we can break the silence and support each other.</p>
+    <a href="{% url 'quiz1' %}"> Click here to access the Quiz! </a>
+    </div>
+    <h1></h1>
+<h1></h1>
+<section>
+    <h2>Latest News on Mental Health and Well-being</h2>
+
+    <div class="masonry-grid">
+        {% for article in articles %}
+            <div class="grid-item">
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.description }}</p>
+                <a href="{{ article.url }}" target="_blank">Read more</a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+    
 </div>
 
 {% endblock %}

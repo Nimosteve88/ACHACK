@@ -200,6 +200,9 @@ p {
     height: 45%;
 }
 
+.container {
+    text-align: center;
+}
 
 .cta-button:hover {
     background-color: #032305;
@@ -420,4 +423,21 @@ button {
 
 button:hover {
     background-color: #5445a091;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
 }

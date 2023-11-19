@@ -2,16 +2,44 @@
 
 {% block content %}
 
+
 <div class="container">
-        <div class="content">
-            <h1>Welcome to our Energy and Sustainability Page landing page</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla tortor ut nisi pulvinar, sed aliquam felis malesuada. Sed euismod felis nec massa vestibulum, ac laoreet arcu feugiat. Integer vel urna at velit eleifend tincidunt. Nullam hendrerit justo ac nunc luctus, vitae efficitur urna imperdiet.</p>
-        </div>
+    <div class="content">
+        <h1>Welcome to Our Energy and Sustainability Landing Page</h1>
 
-        <div class="image">
-            <img src="your-image-url.jpg" alt="Energy and Sustainability Image">
-        </div>
+        <h2>What is Energy and Sustainability?</h2>
+        <p>Energy is like the superpower that makes things work – from lights in your home to the gadgets you use. Sustainability is all about using this superpower wisely so that we don't run out and keep our planet healthy.</p>
 
+        <h2>Why It Matters</h2>
+        <p>Imagine a world where everything is powered by clean and green energy. That's what we're aiming for! Sustainable practices help us protect the environment, save resources, and create a better future for everyone.</p>
+
+        <h2>Easy Ways to Save Energy</h2>
+        
+            <p><strong>Turn Off Lights:</strong> When you leave a room, switch off the lights to save energy.</p>
+            <p><strong>Unplug Chargers:</strong> Chargers still use energy even if they're not charging anything. Unplug them when not in use.</p>
+            <p><strong>Go Solar:</strong> Explore using solar power to generate clean energy for your home.</p>
+            <p><strong>Reduce, Reuse, Recycle:</strong> Minimize waste by recycling and reusing items. It's good for the planet!</p>
+        
+
+        <h2>The Power of Renewable Energy</h2>
+        <p>Renewable energy, like wind and solar power, doesn't run out and doesn't harm the environment. It's our ticket to a sustainable and eco-friendly future.</p>
+
+        <h2>Be an Energy Hero!</h2>
+        <p>Small actions add up to big changes. By being mindful of your energy use, you can be a hero in making our world cleaner, greener, and more sustainable.</p>
+    </div>
 </div>
-
+<h1></h1>
+<a href="{% url 'quiz2' %}"> Click here to access the Quiz!</a>
+<section>
+    <!-- Display news articles in a masonry grid format -->
+    <div class="masonry-grid">
+        {% for article in articles %}
+            <div class="masonry-item">
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.description }}</p>
+                <a href="{{ article.url }}" target="_blank">Read more</a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
 {% endblock %}
