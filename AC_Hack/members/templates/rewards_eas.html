@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
-    <div class="scores">
-        <h1>Previous Score</h1>
-        <h1>{{before}}</h1>
+    <div style="color: black;"  class="scores-container">
+        <div class="score-section">
+            <h1>Previous Score</h1>
+            <h1>{{ before }}</h1>
+        </div>
 
-        <h1>After Score</h1>
-        <h1>{{after}}</h1>
+        <div class="score-section">
+            <h1>After Score</h1>
+            <h1>{{ after }}</h1>
+        </div>
     </div>
 
     <table class="scoreboard">
@@ -19,9 +23,9 @@
         </thead>
         <tbody>
             {% for player in players %}
-                <tr></tr>
+                <tr>
                     <td>{{ forloop.counter }}</td>
-                    <td>{{ player }}</td>
+                    <td>{{ player.name }}</td>
                     <td>{{ player.score }}</td>
                 </tr>
             {% endfor %}
@@ -29,7 +33,6 @@
     </table>
 
     <!-- Add any additional content or scripts as needed -->
-
 </body>
 
 {% endblock %}

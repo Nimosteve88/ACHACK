@@ -311,13 +311,22 @@ label {
     text-decoration: none;
     border-radius: 8px;
 }
+.scores-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .scoreboard {
-    padding: 20px;
-    background-color: #4caf4f00;
-    color: rgb(15, 1, 1);
-    text-decoration: none;
-    border-radius: 8px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.scoreboard th, .scoreboard td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
 }
 
 .modal {
