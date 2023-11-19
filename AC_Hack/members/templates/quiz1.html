@@ -8,12 +8,12 @@
                 <h2>Quiz 1</h2>
                 <p>Which of the following is not a renewable energy source?</p>
                 <form id="quizForm">
-                    <label><input type="radio" name="answer" value="A"> Coal </label>
-                    <label><input type="radio" name="answer" value="B"> Option B</label>
-                    <label><input type="radio" name="answer" value="C"> Option C</label>
-                    <label><input type="radio" name="answer" value="D"> Option D</label>
-                    <button type="button" onclick="insertUserChoice()">Submit</button>
+                    <label for="optionA" id="optionA"><input type="radio" id="optionA" name="answer" value="A"> Option A </label>
+                    <label for="optionB" id="optionB"><input type="radio" id="optionB" name="answer" value="B"> Option B</label>
+                    <label for="optionC" id="optionC"><input type="radio" id="optionC" name="answer" value="C"> Option C</label>
+                    <label for="optionD" id="optionD"><input type="radio" id="optionD" name="answer" value="D"> Option D</label>
                 </form>
+                <button type="button" id="submitBtn" onclick="insertUserChoice()">Submit</button>
                 <!-- Add more questions as needed -->
                 <div class="next-q">&#9654;</div>
                 <div class="prev-q">&#9664;</div>

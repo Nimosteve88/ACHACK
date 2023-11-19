@@ -44,8 +44,72 @@ header {
     padding: 20px;
 }
 
+#quizForm {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 1300px; /* Adjust the maximum width as needed */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Adjust the gap between items */
+    justify-items: center; /* Center items horizontally within the grid */
+    align-items: center; /* Center items vertically within the grid */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+#optionA {
+    background-color: red; /* Green color */
+}
+
+#optionB {
+    background-color: blue; /* Blue color */
+}
+
+#optionC {
+    background-color: orange; /* Yellow color */
+}
+
+#optionD {
+    background-color: green; /* Pink color */
+}
+
+label {
+    display: block;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Take the full width of the container */
+    height: 100px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+input[type="radio"]:checked+label {
+    filter: brightness(60%); /* Dim the color slightly when selected */
+}
 
 
+#submitBtn {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    width: 50%; /* Take the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+#submitBtn:hover {
+    background-color: orange;
+}
 
 .header-content {
     display: flex;
