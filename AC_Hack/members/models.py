@@ -12,3 +12,6 @@ class Person(models.Model):
     hr_score = models.IntegerField()
     kf_score = models.IntegerField()
     mhawb_score = models.IntegerField()
+
+    def __str__(self) -> str:
+        return self.fname + ' ' + self.lname

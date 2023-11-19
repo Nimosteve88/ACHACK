@@ -20,8 +20,9 @@
         <tbody>
             {% for player in players %}
                 <tr>
-                    <td>{{ player.rank }}</td>
-                    <td>{{ player.name }}</td>
+                    <td>{{ rank }}</td>
+                    <td>{{ player }}</td>
+                    {% if %}
                     <td>{{ player.score }}</td>
                 </tr>
             {% endfor %}
