@@ -1,12 +1,10 @@
-<!-- home.html -->
-
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
 <section>
     <h2>Your Journey to Health and Wellness Starts</h2>
     <img class="header-image" src="{% static 'IMG_0020.jpg' %}" alt="alternatetext">
-    <h2>Want to know what we can provide?</h2>
+    <h2 id="scroll-trigger">Click here to learn about what we can provide!</h2>
 </section>
 <h1></h1>
 <h1></h1>
@@ -24,4 +22,15 @@
         <a href="{% url 'quiz1' %}" class="cta-button">Belonging to a Community</a>
     </div>
 </section>
+
+<script>
+document.getElementById('scroll-trigger').addEventListener('click', function() {
+    // Scroll to the bottom of the page
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+});
+</script>
+
 {% endblock %}

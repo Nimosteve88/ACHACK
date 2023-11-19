@@ -256,6 +256,7 @@ label {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; /* or justify-content: space-between; */
+    animation: slideUp 1s ease-out;
 }
 
 .fact-box {
@@ -272,6 +273,7 @@ label {
     box-sizing: border-box; /* Add this to include padding and border in the width */
     text-align: center;
     cursor: pointer;
+    animation: slideUp 1s ease-out;
 }
 
 .prev-q {
@@ -323,6 +325,7 @@ label {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
+    animation: slideUp 1s ease-out;
 }
 
 .modal-content {
@@ -337,6 +340,7 @@ label {
     width: 80%;
     height: 80%;
     text-align: center;
+    animation: slideUp 1s ease-out;
 }
 
 .modal-content {
@@ -373,4 +377,47 @@ label {
 
 .title-and-image img {
     margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto; /* Adjust the margin to center the login container vertically */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf4f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5445a091;
 }

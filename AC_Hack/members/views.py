@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from models import Person
+# from models import Person
 
 
 # Create your views here.
@@ -57,3 +57,7 @@ def rewards_other(request):
     players = Person.objects.all()
     context = {"before" : 1, "after": 15, "players" : players} # we are taking in the before, after and the players database
     return HttpResponse(template.render(context, request))
+
+def login(request):
+    template = loader.get_template('login.html')
+    return HttpResponse(template.render())
