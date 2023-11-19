@@ -20,7 +20,6 @@
             </div>
         </div>
     <!-- Arrow for Next Page -->
-    <div class="next-page">&#9654;</div>
 </div>
 <script>
     const quiz1Answers = [];
@@ -30,7 +29,13 @@
     let maxScore = quiz1Answers.length;
 
     function insertUserChoice(){
-
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (selectedAnswer) {
+            userAnswers.push(selectedAnswer.value);
+        } 
+        else {
+            alert('Please select an answer before submitting lad');
+        }
     }
 </script>
 {% endblock %}
