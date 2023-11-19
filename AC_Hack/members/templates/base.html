@@ -8,6 +8,23 @@
     <title>{% block title %}Bridging the Gap{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <!-- Add your custom CSS for the timer here -->
+    <style>
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .pomodoro-timer {
+            display: flex;
+            align-items: center;
+        }
+
+        #timer {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -19,11 +36,21 @@
                     <h1 class="header-title">Bridging the Gap</h1>
                 </a>
             </div>
+
+<!-- Pomodoro Timer Section -->
+            <div class="pomodoro-timer">
+                <div id="timer">25:00</div>
+                <button onclick="startTimer()">Start Timer</button>
+                <button onclick="stopTimer()">Stop Timer</button>
+            </div>
+
             <div class="header-buttons">
                 <a href="{% url 'quiz1' %}" class="header-link">Button 1</a>
                 <a href="#" class="header-link">Button 2</a>
                 <a href="#" class="header-link">Button 3</a>
             </div>
+            
+            
         </div>
     </header>
 
@@ -40,6 +67,37 @@
 <footer>
     &copy; 2023 Bridging the Gap. All rights reserved.
 </footer>
+
+<!-- Add your custom JavaScript for the timer here -->
+<script>
+    let timerInterval;
+
+    function startTimer() {
+        let time = 1500; // 25 minutes in seconds
+        updateTimerDisplay(time);
+
+        timerInterval = setInterval(function () {
+            time--;
+            updateTimerDisplay(time);
+
+            if (time === 0) {
+                stopTimer();
+            }
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        updateTimerDisplay(0);
+    }
+
+    function updateTimerDisplay(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        const display = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        document.getElementById('timer').textContent = display;
+    }
+</script>
 
 </body>
 </html>
