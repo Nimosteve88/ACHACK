@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 # from models import Person
+import requests
 
 
 # Create your views here.
@@ -27,8 +28,25 @@ def belongingToACommunity(request):
     return HttpResponse(template.render())
 
 def energyAndSustainability(request):
-    template = loader.get_template('energyAndSustainability.html')
-    return HttpResponse(template.render())
+    api_key = 'b2c8adec9244439385335aee2daf292e'
+    url = 'https://newsapi.org/v2/everything'
+
+    # Parameters for the News API request
+    params = {
+        'q': 'technology',
+        'apiKey': api_key,
+    }
+
+    # Make the News API request
+    response = requests.get(url, params=params)
+    articles = response.json().get('articles', [])
+
+    # Limit the number of articles to 8
+    articles = articles[:8]
+
+    # Pass the articles to the template
+    context = {'articles': articles}
+    return render(request, 'energyAndSustainability.html', context)
     
 def financialLiteracy(request):
     template = loader.get_template('financialLiteracy.html')
@@ -43,8 +61,23 @@ def keepingFit(request):
     return HttpResponse(template.render())
 
 def mentalHealthAndWellBeing(request):
-    template = loader.get_template('mentalHealthAndWellBeing.html')
-    return HttpResponse(template.render())
+    api_key = 'b2c8adec9244439385335aee2daf292e'
+    url = 'https://newsapi.org/v2/everything'
+
+    # Parameters for the News API request
+    params = {
+        'q': 'health',
+        'apiKey': api_key,
+    }
+
+    # Make the News API request
+    response = requests.get(url, params=params)
+    articles = response.json().get('articles', [])
+    articles = articles[:8]
+
+    # Pass the articles to the template
+    context = {'articles': articles}
+    return render(request, 'mentalHealthAndWellBeing.html', context)
     
 def rewards_eas(request):
     template = loader.get_template('rewards_eas.html')
