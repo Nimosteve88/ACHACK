@@ -339,6 +339,14 @@ label {
     text-align: center;
 }
 
+.modal-content {
+    overflow-y: auto;
+}
+.modal-img {
+    max-width: 100%;
+    height: auto;
+}
+
 .close {
     position: absolute;
     top: 10px;
