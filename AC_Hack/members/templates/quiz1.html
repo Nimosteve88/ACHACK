@@ -6,12 +6,12 @@
             <!-- Text-based Quiz Boxes -->
             <div class="quiz-box">
                 <h2>Quiz 1</h2>
-                <p id="question">Random question?</p>
+                <p id="question">1. What do most families spend the most energy on?</p>
                 <form id="quizForm">
-                    <label for="optionA" id="optionA"><input type="radio" id="optionA" name="answer" value="A"><p>Option A</p></label>
-                    <label for="optionB" id="optionB"><input type="radio" id="optionB" name="answer" value="B"><p>Option B</p></label>
-                    <label for="optionC" id="optionC"><input type="radio" id="optionC" name="answer" value="C"><p>Option C</p></label>
-                    <label for="optionD" id="optionD"><input type="radio" id="optionD" name="answer" value="D"><p>Option D</p></label>
+                    <label for="optionA" id="optionA"><input type="radio" id="optionA" name="answer" value="A"><p>Using electronic devices</p></label>
+                    <label for="optionB" id="optionB"><input type="radio" id="optionB" name="answer" value="B"><p>Turning on lights</p></label>
+                    <label for="optionC" id="optionC"><input type="radio" id="optionC" name="answer" value="C"><p>Running the heater</p></label>
+                    <label for="optionD" id="optionD"><input type="radio" id="optionD" name="answer" value="D"><p>Watching TV</p></label>
                 </form>
                 <button type="button" id="submitBtn" onclick="insertUserChoice()">Submit</button>
                 <!-- Add more questions as needed -->
@@ -29,46 +29,45 @@
     const userAnswers = [];
     var score1, score2;
     let maxScore = quiz1Answers.length;
-    const values = ['A', 'B', 'C', 'D'];
     const quizQuestions = [
         {
-            question: "What do most families spend the most energy on?",
+            question: "1. What do most families spend the most energy on?",
             options: [" Using electronic", " Turning on lights", " Running the heater", " Watching TV"],
         },
         {
-            question: "What does 'electrification' mean in simple terms",
+            question: "2. What does 'electrification' mean in simple terms",
             options: [" Turning off electrical appliances", " Using electricity to power things", " Studying electricity in school", " Creating new electrical gadgets"],
         },
         {
-            question: "What is the main source of renewable energy that comes from the wind?",
+            question: "3. What is the main source of renewable energy that comes from the wind?",
             options: ["Windmill energy", "Sunlight", "Wind energy", "Cloud power"],
         },
         {
-            question: 'When we see "kWh" on our electricity bill, what does it tell us?',
+            question: '4. When we see "kWh" on our electricity bill, what does it tell us?',
             options: ["How much heat is used", "The cost of electricty", "How much electricity is consumed", "The temperature in the house"],
         },
         {
-            question: 'How do we generate electricity from sunlight using special cells?',
+            question: '5. How do we generate electricity from sunlight using special cells?',
             options: ["Sunlight-to-power transformation", "Solar panels", "Sunshine conversion", "Light bulbs"],
         },
         {
-            question: 'Which of the following is NOT a renewable energy source?',
+            question: '6. Which of the following is NOT a renewable energy source?',
             options: ["Wind energy", "Solar power", "Nuclear power", "Hydroelectric power"],
         },
         {
-            question: 'Why do we use energy-efficient light bulbs?',
+            question: '7. Why do we use energy-efficient light bulbs?',
             options: ["To make the room warmer", "To save money on electricity", "To make the lights brighter", "To have different colors of light"],
         },
         {
-            question: 'How can individuals contribute to reducing their carbon footprint?',
+            question: '8. How can individuals contribute to reducing their carbon footprint?',
             options: ["Increasing energy consumption", "Driving alone in cars", "Using public transportation", "Wasting water at home"],
         },
         {
-            question: 'How can students promote energy conservation in their school?',
+            question: '9. How can students promote energy conservation in their school?',
             options: ["Turning on all lights in classrooms", "Encouraging the use of disposable items ", "Organizing energy-saving campaigns", "Leaving electronic devices on standby"],
         },
         {
-            question: 'Which of these methods can be used to save energy?',
+            question: '10. Which of these methods can be used to save energy?',
             options: ["Turning off lights when leaving the room", "Reduce water consumption", "Washing at cold temperatures", "All of the above"],
         },
     ];
@@ -102,6 +101,9 @@
             qIndex++;
             updateQs();
         }  
+        else{
+            window.location.href = '../facts';
+        }
     }
 
     function prevQ(){
@@ -120,5 +122,6 @@
         }
         return count;
     }
+    score1 = 100 * (getScore(userAnswers) / quiz1Answers.length);
 </script>
 {% endblock %}
