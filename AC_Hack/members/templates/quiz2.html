@@ -5,66 +5,121 @@
     <div class="quiz-container">
         <!-- Text-based Quiz Boxes -->
         <div class="quiz-box">
-            <h2 class="quiz-title">Quiz 2</h2>
-            <p>Which of the following is not a renewable energy source</p>
+            <h2>Quiz 1</h2>
+            <p id="question">1. What is the biggest energy consumer in most households, according to the lesson?</p>
             <form id="quizForm">
-                <label><input type="radio" name="answer" value="A"> Option A</label>
-                <label><input type="radio" name="answer" value="B"> Option B</label>
-                <label><input type="radio" name="answer" value="C"> Option C</label>
-                <label><input type="radio" name="answer" value="D"> Option D</label>
-                <button type="button" onclick="checkAnswer()">Submit</button>
+                <label for="optionA" id="optionA"><input type="radio" id="optionA" name="answer" value="A"><p>Electronic devices</p></label>
+                <label for="optionB" id="optionB"><input type="radio" id="optionB" name="answer" value="B"><p>Lighting</p></label>
+                <label for="optionC" id="optionC"><input type="radio" id="optionC" name="answer" value="C"><p>Refrigerator</p></label>
+                <label for="optionD" id="optionD"><input type="radio" id="optionD" name="answer" value="D"><p>Heating and cooling systems</p></label>
             </form>
+            <button type="button" id="submitBtn" onclick="insertUserChoice()">Submit</button>
             <!-- Add more questions as needed -->
-            <div class="next-q">&#9654;</div>
-            <div class="prev-q">&#9664;</div>
+            <div class="next-q" onclick="nextQ()">&#9654;</div>
+            <div class="prev-q" onclick="prevQ()">&#9664;</div>
         </div>
     </div>
 <!-- Arrow for Next Page -->
-<div class="next-page">&#9654;</div>
 </div>
+<script>
+    const quiz2Answers = ['D', 'B', 'B', 'A', 'D', 'D', 'C', 'A', 'B', 'B'];
+    let qIndex = 0;
+    const questionElement = document.getElementById("question");
+    const formElement = document.getElementById("quizForm");
+    const userAnswers = [];
+    const quizQuestions = [
+            {
+                question: "1. What is the biggest energy consumer in most households, according to the lesson?",
+                options: [" Electronic devices", " Lighting", " Refrigirator", " Heating and cooling systems"],
+            },
+            {
+                question: "2. What does the term 'electrification' mean in the context of energy?",
+                options: [" Using fossil fuels for energy", " Utilizing electricity instead of fossil fuels", " Studying electrical appliances", " Creating new electrical gadgets"],
+            },
+            {
+                question: "3. What is the primary purpose of wind turbines mentioned in the lesson?",
+                options: ["Cooling the environment", "Generating renewable energy", "Acting as giant fans", "Producing wind for power"],
+            },
+            {
+                question: '4. What does the unit "kWh" represent in the context of electricity consumption?',
+                options: ["Kilowatt-hour", "Kilometer per hour", "Kettle with heater", "Kinetic wind harvest"],
+            },
+            {
+                question: '5. How do solar panels generate electricity according to the lesson?',
+                options: ["Through the photonic effect", "By converting wind energy", "Using geothermal heat", "Via the photovoltaic effect"],
+            },
+            {
+                question: '6. What is NOT mentioned as a renewable energy source in the lesson?',
+                options: ["Hydropower", "Geothermal energy", "Biomass energy", "Nuclear power"],
+            },
+            {
+                question: '7. Why have traditional incandescent light bulbs shifted to energy-efficient LEDs, as mentioned in the lesson?',
+                options: ["They are cheaper", "Aesthetics", "They consume less energy", "They are brighter"],
+            },
+            {
+                question: '8. What is the measure of greenhouse gas emissions associated with individual activities?',
+                options: ["Carbon footprint", "Energy bill", "Eco-friendly index", "Sustainability score"],
+            },
+            {
+                question: '9. According to the lesson, what is one way students can contribute to energy conservation in their school?',
+                options: ["Using more electronic devices", "Turning off lights in classrooms", "Increasing water consumption", "Encouraging solo driving"],
+            },
+            {
+                question: '10. Why does the lesson emphasize energy conservation as a collective responsibility?',
+                options: ["To reduce individual energy bills", "To preserve the planet for future generations", "To support energy companies", "To promote competition in energy consumption"],
+            },
+        ];
 
-const quizQuestions = [
-        {
-            question: "1. What is the biggest energy consumer in most households, according to the lesson?",
-            options: [" Electronic devices", " Lighting", " Refrigirator", " Heating and cooling systems"],
-        },
-        {
-            question: "2. What does the term "electrification" mean in the context of energy?",
-            options: [" Using fossil fuels for energy", " Utilizing electricity instead of fossil fuels", " Studying electrical appliances", " Creating new electrical gadgets"],
-        },
-        {
-            question: "3. What is the primary purpose of wind turbines mentioned in the lesson?",
-            options: ["Cooling the environment", "Generating renewable energy", "Acting as giant fans", "Producing wind for power"],
-        },
-        {
-            question: '4. What does the unit "kWh" represent in the context of electricity consumption?',
-            options: ["Kilowatt-hour", "Kilometer per hour", "Kettle with heater", "Kinetic wind harvest"],
-        },
-        {
-            question: '5. How do solar panels generate electricity according to the lesson?',
-            options: ["Through the photonic effect", "By converting wind energy", "Using geothermal heat", "Via the photovoltaic effect"],
-        },
-        {
-            question: '6. What is NOT mentioned as a renewable energy source in the lesson?',
-            options: ["Hydropower", "Geothermal energy", "Biomass energy", "Nuclear power"],
-        },
-        {
-            question: '7. Why have traditional incandescent light bulbs shifted to energy-efficient LEDs, as mentioned in the lesson?',
-            options: ["They are cheaper", "Aesthetics", "They consume less energy", "They are brighter"],
-        },
-        {
-            question: '8. What is the measure of greenhouse gas emissions associated with individual activities?',
-            options: ["Carbon footprint", "Energy bill", "Eco-friendly index", "Sustainability score"],
-        },
-        {
-            question: '9. According to the lesson, what is one way students can contribute to energy conservation in their school?',
-            options: ["Using more electronic devices", "Turning off lights in classrooms", "Increasing water consumption", "Encouraging solo driving"],
-        },
-        {
-            question: '10. Why does the lesson emphasize energy conservation as a collective responsibility?',
-            options: ["To reduce individual energy bills", "To preserve the planet for future generations", "To support energy companies", "To promote competition in energy consumption"],
-        },
-    ];
+    function updateQs(){
+        const currentQ = quizQuestions[qIndex];
+        questionElement.innerText = currentQ.question;
 
+        const pElements = formElement.querySelectorAll('label p');
+        const optionsElements = formElement.querySelectorAll('input[name="answer"]');
+        
+        
+        pElements.forEach((p, index) => {
+            p.innerText = currentQ.options[index];
+            optionsElements[index].checked = false;
+        });
+    }
+
+    function insertUserChoice(){
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (selectedAnswer) {
+            userAnswers.push(selectedAnswer.value);
+        } 
+        else {
+            alert('Please select an answer before submitting lad');
+        }
+    }
+
+    function nextQ(){
+        if (qIndex < (quiz1Answers.length - 1)){
+            qIndex++;
+            updateQs();
+        }  
+        else{
+            window.location.href = '../facts';
+        }
+    }
+
+    function prevQ(){
+        if (qIndex > 0){
+            qIndex--;
+            updateQs();
+        }
+    }
+    
+    function getScore(userChoicesArr){
+        count = 0;
+        for (let i = 0; i < quiz1Answers.length - 1; i++){
+            if (userChoicesArr[i] == quiz1Answers[i]){
+                count++;
+            }
+        }
+        return count;
+    }
+</script>
 
 {%endblock%}
