@@ -211,8 +211,8 @@ label {
 }
 
 .header-image {
-    width: 50px; /* Adjust the width as needed */
-    height: 50px; /* Adjust the height as needed */
+    width: 250px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
     margin-right: 20px; /* Adjust the space between the image and the title */
 }
 
