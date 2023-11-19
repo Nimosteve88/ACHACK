@@ -32,17 +32,45 @@
     const values = ['A', 'B', 'C', 'D'];
     const quizQuestions = [
         {
-            question: "Random question",
-            options: [" OptionA", " OptionB", " OptionC", " OptionD"],
-        },
-        {
             question: "What do most families spend the most energy on?",
             options: [" Using electronic", " Turning on lights", " Running the heater", " Watching TV"],
         },
         {
             question: "What does 'electrification' mean in simple terms",
             options: [" Turning off electrical appliances", " Using electricity to power things", " Studying electricity in school", " Creating new electrical gadgets"],
-        }
+        },
+        {
+            question: "What is the main source of renewable energy that comes from the wind?",
+            options: ["Windmill energy", "Sunlight", "Wind energy", "Cloud power"],
+        },
+        {
+            question: 'When we see "kWh" on our electricity bill, what does it tell us?',
+            options: ["How much heat is used", "The cost of electricty", "How much electricity is consumed", "The temperature in the house"],
+        },
+        {
+            question: 'How do we generate electricity from sunlight using special cells?',
+            options: ["Sunlight-to-power transformation", "Solar panels", "Sunshine conversion", "Light bulbs"],
+        },
+        {
+            question: 'Which of the following is NOT a renewable energy source?',
+            options: ["Wind energy", "Solar power", "Nuclear power", "Hydroelectric power"],
+        },
+        {
+            question: 'Why do we use energy-efficient light bulbs?',
+            options: ["To make the room warmer", "To save money on electricity", "To make the lights brighter", "To have different colors of light"],
+        },
+        {
+            question: 'How can individuals contribute to reducing their carbon footprint?',
+            options: ["Increasing energy consumption", "Driving alone in cars", "Using public transportation", "Wasting water at home"],
+        },
+        {
+            question: 'How can students promote energy conservation in their school?',
+            options: ["Turning on all lights in classrooms", "Encouraging the use of disposable items ", "Organizing energy-saving campaigns", "Leaving electronic devices on standby"],
+        },
+        {
+            question: 'Which of these methods can be used to save energy?',
+            options: ["Turning off lights when leaving the room", "Reduce water consumption", "Washing at cold temperatures", "All of the above"],
+        },
     ];
 
     function updateQs(){
@@ -70,8 +98,8 @@
     }
 
     function nextQ(){
-        if (qIndex < quiz1Answers.length - 1){
-            q++;
+        if (qIndex < (quiz1Answers.length - 1)){
+            qIndex++;
             updateQs();
         }  
     }
