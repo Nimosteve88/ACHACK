@@ -301,7 +301,7 @@ label {
 /* Styling for the rewards.html file */
 .scores {
     padding: 20px;
-    background-color: #4CAF50;
+    background-color: #4caf4f00;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -309,8 +309,8 @@ label {
 
 .scoreboard {
     padding: 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4caf4f00;
+    color: rgb(15, 1, 1);
     text-decoration: none;
     border-radius: 8px;
 }
