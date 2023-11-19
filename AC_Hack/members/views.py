@@ -81,13 +81,13 @@ def mentalHealthAndWellBeing(request):
     
 def rewards_eas(request):
     template = loader.get_template('rewards_eas.html')
-    players = [Person("You", "", 7), Person("Olatunde", "Bayo", 2)]
+    players = [Person("You", "", 7), Person("Olatunde", "Bayo", 5), Person("Kwasi", "Appiah", 4), Person("Nancy", "Smith", 2)]
     context = {"before" : 4, "after": 7, "players" : players} # we are taking in the before, after and the players database
     return HttpResponse(template.render(context, request))
 
 def rewards_other(request):
     template = loader.get_template('rewards_other.html')
-    players = [Person("You", "", 7), Person("Olatunde", "Bayo", 2)]
+    players = [Person("You", "", 7), Person("Olatunde", "Bayo", 5), Person("Kwasi", "Appiah", 4), Person("Nancy", "Smith", 2)]
     context = {"before" : 1, "after": 15, "players" : players} # we are taking in the before, after and the players database
     return HttpResponse(template.render(context, request))
 
